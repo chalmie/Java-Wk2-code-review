@@ -27,5 +27,13 @@ public class Word {
     dictionary.clear();
   }
 
+  public static Word find(int id) {
+    try {
+      return dictionary.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
+
 
 }
