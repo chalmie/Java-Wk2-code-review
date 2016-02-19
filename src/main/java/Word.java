@@ -23,6 +23,9 @@ public class Word {
     return dictionary;
   }
 
+  public static void clear() {
+    dictionary.clear();
+  }
 
 
 }

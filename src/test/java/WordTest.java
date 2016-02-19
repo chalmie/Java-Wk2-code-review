@@ -16,4 +16,11 @@ public class WordTest {
     assertTrue(Word.all().size() == testWord.getId());
   }
 
+  @Test
+  public void clear_removesAllWordsFromMemory() {
+    Word testWord = new Word("baka");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
+
 }
