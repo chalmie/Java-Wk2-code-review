@@ -11,6 +11,14 @@ public class WordTest {
   }
 
   @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("baka");
+    Word secondWord = new Word("aho");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
+
+  @Test
   public void getId_returnsWordId_true() {
     Word testWord = new Word("baka");
     assertTrue(Word.all().size() == testWord.getId());
