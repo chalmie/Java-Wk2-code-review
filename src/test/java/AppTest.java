@@ -30,17 +30,17 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Here are all of the definitions for Baka:");
   }
 
-  @Test
-  public void definitionIsDisplayedTest() {
-    goTo("http://localhost:4567/");
-    fill("#word").with("Baka");
-    submit(".btn");
-    click("a", withText("Baka"));
-    fill("#definition").with("Dummy");
-    submit(".btn");
-    click("a", withText("Return to Main Page"));
-    click("a", withText("Baka"));
-    assertThat(pageSource()).contains("Dummy");
-  }
+  // @Test
+  // public void definitionIsDisplayedTest() {
+  //   goTo("http://localhost:4567/");
+  //   fill("#word").with("Baka");
+  //   submit(".btn");
+  //   click("a", withText("Baka"));
+  //   fill("#definition").with("Dummy");
+  //   submit(".btn");
+  //   click("a", withText("Return to Main Page"));
+  //   click("a", withText("Baka"));
+  //   assertThat(pageSource()).contains("Dummy");
+  // }
 
 }
