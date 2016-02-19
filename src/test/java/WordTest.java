@@ -37,4 +37,10 @@ public class WordTest {
     assertEquals(Word.find(testWord.getId()), testWord);
   }
 
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyArrayList() {
+    Word testWord = new Word("baka");
+    assertTrue(testWord.getDefinitions() instanceof ArrayList);
+  }
+
 }
