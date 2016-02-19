@@ -22,6 +22,9 @@ _Input a word and its definition(s) for review later_
     * _$ gradle run_
 * _Open your web browser of choice to localhost:4567_
 
+## Bugs
+
+_StaleElementExceptionError for third integration test_
 ## Technologies Used
 
 _Java, Spark, Junit, Velocity, Fluentlenium, Bootstrap_
