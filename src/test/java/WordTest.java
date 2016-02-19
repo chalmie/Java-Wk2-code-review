@@ -1,10 +1,14 @@
+import java.util.ArrayList;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class PROJECTTest {
+public class WordTest {
 
   @Test
-  public void method_input_result() {
-    // eventually put your testing code here
+  public void getName_returnsName_true() {
+    Word testWord = new Word("baka");
+    assertEquals("baka", testWord.getName());
   }
+
+
 }
