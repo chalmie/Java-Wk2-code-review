@@ -10,5 +10,10 @@ public class WordTest {
     assertEquals("baka", testWord.getName());
   }
 
+  @Test
+  public void getId_returnsWordId_true() {
+    Word testWord = new Word("baka");
+    assertTrue(Word.all().size() == testWord.getId());
+  }
 
 }
