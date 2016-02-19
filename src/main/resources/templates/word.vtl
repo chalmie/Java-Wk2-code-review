@@ -1,0 +1,15 @@
+<h2>Here are all of the definitions for $word.getName(): </h2>
+
+#foreach($definition in $definitions)
+  <h4>$definition.getExplanation()</h3>
+#end
+
+<form action='/word/$word.getId()' method='post'>
+  <div class="form-group">
+    <label for="definition">Enter a new definition</label>
+    <input id="definition" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add definition!</button>
+</form>
+</br>
+<a href="/">Return to Main Page</a>

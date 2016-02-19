@@ -1,0 +1,19 @@
+<h1>Personal Dictionary</h1>
+<h4>Input a word you want to add to your dictionary!</h4>
+
+<form action='/' method='post'>
+  <div class="form-group">
+    <label for="word">Enter the word</label>
+    <input id="word" name="word" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Add Word!</button>
+</form>
+
+<h4>Or, click on an existing word to view and add definitions!<h4>
+
+
+
+
+#foreach($word in $words)
+ <h3><a href="word/$word.getId()">$word.getName()</a></h3>
+#end
