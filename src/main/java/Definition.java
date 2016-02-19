@@ -4,10 +4,12 @@ import java.util.ArrayList;
 public class Definition {
   private static ArrayList<Definition> definitions = new ArrayList<Definition>();
   private String mExplanation;
+  private int mId;
 
   public Definition(String explanation) {
     mExplanation = explanation;
     definitions.add(this);
+    mId = definitions.size();
   }
 
   public String getExplanation() {
@@ -20,6 +22,10 @@ public class Definition {
 
   public static void clear() {
     definitions.clear();
+  }
+
+  public int getId() {
+    return mId;
   }
 
 }

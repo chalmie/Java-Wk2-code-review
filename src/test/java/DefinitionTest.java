@@ -33,4 +33,10 @@ public class DefinitionTest {
     assertEquals(Definition.all().size(), 0);
   }
 
+  @Test
+  public void newId_definitionsInstantiatesWithId_true() {
+    Definition testDefinition = new Definition("dummy");
+    assertEquals(Definition.all().size(), testDefinition.getId());
+  }
+
 }
