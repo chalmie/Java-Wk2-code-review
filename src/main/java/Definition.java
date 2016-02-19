@@ -28,4 +28,12 @@ public class Definition {
     return mId;
   }
 
+  public static Definition find(int id) {
+    try {
+      return definitions.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
+
 }
