@@ -21,4 +21,15 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Personal Dictionary");
   }
 
+  @Test
+  public void newWordIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("Baka");
+    submit(".btn");
+    click("a", withText("Baka"));
+    assertThat(pageSource()).contains("Here are all of the definitions for Baka:");
+  }
+
+
+
 }
