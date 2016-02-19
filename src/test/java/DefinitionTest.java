@@ -12,4 +12,10 @@ public class DefinitionTest {
     assertEquals(true, testDefinition instanceof Definition);
   }
 
+  @Test
+  public void task_instantiatesWithExplanation_true() {
+    Definition testDefinition = new Definition("dummy");
+    assertEquals("dummy", testDefinition.getExplanation());
+  }
+
 }

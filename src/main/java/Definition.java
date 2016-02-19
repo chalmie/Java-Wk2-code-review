@@ -7,4 +7,8 @@ public class Definition {
   public Definition(String explanation) {
     mExplanation = explanation;
   }
+
+  public String getExplanation() {
+    return mExplanation;
+  }
 }
