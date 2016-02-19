@@ -3,8 +3,8 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
 
-  // @Rule
-  // public ClearRule clearRule = new ClearRule();
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 
   @Test
   public void Definition_instantiatesCorrectly_true() {
@@ -24,6 +24,13 @@ public class DefinitionTest {
     Definition secondDefinition = new Definition("dummy");
     assertTrue(Definition.all().contains(firstDefinition));
     assertTrue(Definition.all().contains(secondDefinition));
+  }
+
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList() {
+    Definition testDefinition = new Definition("dummy");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
   }
 
 }

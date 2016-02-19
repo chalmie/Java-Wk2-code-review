@@ -18,4 +18,8 @@ public class Definition {
     return definitions;
   }
 
+  public static void clear() {
+    definitions.clear();
+  }
+
 }
