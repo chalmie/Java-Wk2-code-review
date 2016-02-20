@@ -1,6 +1,6 @@
 # _Dictionary_
 
-#### _Store vocabulary, February 19, 2016_
+#### _Store your vocabulary, February 19, 2016_
 
 #### By _**Blair Peterson**_
 
