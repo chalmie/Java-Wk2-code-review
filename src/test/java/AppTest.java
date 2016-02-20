@@ -1,5 +1,6 @@
 import org.fluentlenium.adapter.FluentTest;
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -15,6 +16,8 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
+  @Rule
+  public ClearRule clearRule = new ClearRule();
   @Test
   public void rootTest() {
     goTo("http://localhost:4567/");
@@ -30,17 +33,17 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Here are all of the definitions for Baka:");
   }
 
-  // @Test
-  // public void definitionIsDisplayedTest() {
-  //   goTo("http://localhost:4567/");
-  //   fill("#word").with("Baka");
-  //   submit(".btn");
-  //   click("a", withText("Baka"));
-  //   fill("#definition").with("Dummy");
-  //   submit(".btn");
-  //   click("a", withText("Return to Main Page"));
-  //   click("a", withText("Baka"));
-  //   assertThat(pageSource()).contains("Dummy");
-  // }
+  @Test
+  public void definitionIsDisplayedTest() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("Baka");
+    submit(".btn");
+    click("a", withText("Baka"));
+    fill("#definition").with("Dummy");
+    submit(".btn");
+    click("a", withText("Return to Main Page"));
+    click("a", withText("Baka"));
+    assertThat(pageSource()).contains("Dummy");
+  }
 
 }
